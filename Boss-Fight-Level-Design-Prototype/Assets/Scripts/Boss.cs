@@ -1,9 +1,16 @@
-﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-internal class Boss
+public class Boss : MonoBehaviour
 {
-    internal void LookAtPlayer()
+    public Transform player;
+    public bool isFlipped = false;
+    public void LookAtPlayer()
     {
-        throw new NotImplementedException();
+        Vector3 flipped = transform.localScale;
+        flipped.z *= -1f;
+
+      
     }
 }
