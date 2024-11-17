@@ -4383,6 +4383,7 @@ GameObject:
   - component: {fileID: 1342053432}
   - component: {fileID: 1342053431}
   - component: {fileID: 1342053430}
+  - component: {fileID: 1342053434}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -4963,12 +4964,26 @@ Transform:
   m_GameObject: {fileID: 1342053429}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.85, y: -2.49, z: 0}
+  m_LocalPosition: {x: 14.13, y: -9.13, z: 0}
   m_LocalScale: {x: 0.41595978, y: 0.46135217, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1342053434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342053429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad29a005cd8b3c48bbffe96f9eb0bd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  isFlipped: 0
 --- !u!1 &1419922890
 GameObject:
   m_ObjectHideFlags: 0
@@ -5944,7 +5959,7 @@ Transform:
   m_GameObject: {fileID: 1678652985}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.13, y: -10.38, z: 0}
+  m_LocalPosition: {x: 34.32, y: -10.38, z: 0}
   m_LocalScale: {x: 0.14916947, y: 0.25752884, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
