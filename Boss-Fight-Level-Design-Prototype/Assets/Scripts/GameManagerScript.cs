@@ -37,4 +37,9 @@ public class GameManagerScript : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+    public void quit()
+    {
+        Application.Quit();
+    }
+    
 }

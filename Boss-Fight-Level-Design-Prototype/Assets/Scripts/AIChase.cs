@@ -23,11 +23,13 @@ public class AIChase : MonoBehaviour
         distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
         direction.Normalize();
+        
 
 
-        if(distance < 4)
+        if(distance < 6)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+            
             
         }
     }
