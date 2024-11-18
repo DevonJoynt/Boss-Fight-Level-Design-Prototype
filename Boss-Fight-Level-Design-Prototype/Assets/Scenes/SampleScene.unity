@@ -1924,6 +1924,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 967581748}
+  - {fileID: 575323861}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &285884178
@@ -2253,7 +2254,7 @@ Transform:
   m_GameObject: {fileID: 351532634}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.8668, y: -11.2491, z: 0}
+  m_LocalPosition: {x: 31.28, y: -13.29, z: 0}
   m_LocalScale: {x: 0.2556, y: 0.2458, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2742,7 +2743,7 @@ Transform:
   m_GameObject: {fileID: 498901006}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.35, y: -10.38, z: 0}
+  m_LocalPosition: {x: 38.17, y: -9.02, z: 0}
   m_LocalScale: {x: 0.14916947, y: 0.25752884, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2917,6 +2918,37 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &575323860
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 575323861}
+  m_Layer: 0
+  m_Name: ShootingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &575323861
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575323860}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.591, y: -0.299, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 285884175}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &622438096
 GameObject:
   m_ObjectHideFlags: 0
@@ -5695,8 +5727,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb16df6f1cb463458494d55c3a81d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  chaseDistance: 4
+  speed: 2
+  chaseDistance: 8
   stopDistance: 1
   target: {fileID: 285884169}
 --- !u!1 &1419922890
@@ -5788,6 +5820,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1502785558}
   - component: {fileID: 1502785561}
+  - component: {fileID: 1502785565}
+  - component: {fileID: 1502785564}
+  - component: {fileID: 1502785563}
+  - component: {fileID: 1502785562}
   m_Layer: 0
   m_Name: Baby Robot 1
   m_TagString: Untagged
@@ -5804,7 +5840,7 @@ Transform:
   m_GameObject: {fileID: 1502785557}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.4896393, y: -14.831072, z: 0.15816434}
+  m_LocalPosition: {x: 13.72, y: -14.831072, z: 0.15816434}
   m_LocalScale: {x: 0.20439623, y: 0.21084897, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5862,6 +5898,83 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1502785562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502785557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3923d3ab116bc44198a887129529f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 285884169}
+  respawnPoint: {fileID: 763527007}
+--- !u!114 &1502785563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502785557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e357b4949c9bc9442a1427af48527a7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pHealth: {fileID: 285884179}
+  damage: 20
+--- !u!114 &1502785564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502785557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca470cd175deb824eac77e1879e602bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 285884175}
+  moveSpeed: 2
+--- !u!70 &1502785565
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502785557}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -3.18}
+  m_Size: {x: 7.61, y: 4.65}
+  m_Direction: 1
 --- !u!1 &1519198193
 GameObject:
   m_ObjectHideFlags: 0
@@ -6537,6 +6650,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1650695205}
+  - component: {fileID: 1650695206}
   m_Layer: 0
   m_Name: Baby Robot 1
   m_TagString: Untagged
@@ -6560,6 +6674,33 @@ Transform:
   - {fileID: 1502785558}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1650695206
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650695202}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1676313148
 GameObject:
   m_ObjectHideFlags: 0
@@ -6790,7 +6931,7 @@ Transform:
   m_GameObject: {fileID: 1678652985}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.32, y: -10.38, z: 0}
+  m_LocalPosition: {x: 79.57, y: -10.38, z: 0}
   m_LocalScale: {x: 0.14916947, y: 0.25752884, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
