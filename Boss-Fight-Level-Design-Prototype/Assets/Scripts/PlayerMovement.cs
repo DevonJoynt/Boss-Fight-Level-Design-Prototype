@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     private bool grounded;
     private bool m_FacingRight;  //added
 
+    public CoinManage cm;
+
     private void Awake()
 
     {
@@ -93,6 +95,14 @@ public class PlayerMovement : MonoBehaviour
         m_FacingRight = !m_FacingRight;  //added
 
         transform.Rotate(0f, 180f, 0f);  //added
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Coin"))
+        {
+            Destroy(other.gameObject);
+            cm.coinCount++;
+        }
     }
 
 }

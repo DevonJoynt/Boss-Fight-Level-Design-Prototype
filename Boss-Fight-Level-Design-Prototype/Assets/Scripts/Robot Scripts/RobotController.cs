@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace DouglasAvila.CobraRobot.Scripts
 {
-    public class CharacterController : MonoBehaviour
+    public class RobotController : MonoBehaviour
     {
         [Header("Horizontal Movement")]
         [Header("Variables")] [SerializeField] private float maxHorizontalSpeed = 1000f;
