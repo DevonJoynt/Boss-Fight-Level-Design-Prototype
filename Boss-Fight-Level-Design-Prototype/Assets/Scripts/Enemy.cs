@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,12 @@ public class Enemy : MonoBehaviour
             Die();
         }
     }
+
+    internal void OnHit()
+    {
+        throw new NotImplementedException();
+    }
+
     private void DeathEffect()
     {
         if(deathEffect != null)
