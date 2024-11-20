@@ -1,25 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class RobotBoss : MonoBehaviour
 {
+    public int LifeTotal = 3;  //just added
     public float speed;
     public float chaseDistance;
     public float stopDistance;
     public GameObject target;
+
+    public Rigidbody2D rb; //Just added
 
     private float targetDistance;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        rb = gameObject.GetComponent<Rigidbody2D>();   //just added
     }
 
     // Update is called once per frame
     void Update()
     {
+        rb.velocity = transform.right * speed;
+
         targetDistance = Vector2.Distance(transform.position, target.transform.position);
         if (targetDistance < chaseDistance && targetDistance > stopDistance)
             ChasePlayer();

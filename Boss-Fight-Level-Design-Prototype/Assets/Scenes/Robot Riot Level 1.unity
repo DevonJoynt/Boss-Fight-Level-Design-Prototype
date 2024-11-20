@@ -2002,7 +2002,7 @@ Transform:
   m_GameObject: {fileID: 233864758}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.5, y: 17.26, z: -0.04116829}
+  m_LocalPosition: {x: -10.5, y: 18.88, z: -0.04116829}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2447,11 +2447,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 285884169}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6af2f204d735ac4cb9a46d8f7c49356, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e8250b88e06f5141813e555895a2205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 8670413978014912728, guid: 9b71f1dae6edb7e46adbc2f10289805e, type: 3}
-  shotPoint: {fileID: 575323861}
+  FirePoint: {fileID: 575323861}
+  Fireball: {fileID: 1062319428661398186, guid: 9bda9336f92af9646b9b79fdc5bebd50, type: 3}
 --- !u!1001 &298642311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3319,7 +3319,7 @@ Transform:
   m_GameObject: {fileID: 465652157}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.139999, y: -2.8199997, z: -0.04116829}
+  m_LocalPosition: {x: 9.139999, y: -1.95, z: -0.04116829}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3547,13 +3547,14 @@ GameObject:
   - component: {fileID: 498901015}
   - component: {fileID: 498901016}
   - component: {fileID: 498901017}
+  - component: {fileID: 498901018}
   m_Layer: 0
   m_Name: Robot 2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &498901007
 Animator:
   serializedVersion: 5
@@ -3746,6 +3747,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 285884175}
   moveSpeed: 3
+--- !u!114 &498901018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498901006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e03d1808b37fb45af2a9cf446a8b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LifeTotal: 3
+  EnemySpeed: 20
+  rb: {fileID: 498901012}
 --- !u!4 &498912593 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1332886256680386259, guid: ff4d9c52f3f501d49817e349ab763506, type: 3}
@@ -4093,7 +4109,7 @@ GameObject:
   m_Component:
   - component: {fileID: 575323861}
   m_Layer: 0
-  m_Name: ShotPoint
+  m_Name: Fire Point
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -4108,7 +4124,7 @@ Transform:
   m_GameObject: {fileID: 575323860}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.17, y: -0.34, z: 0}
+  m_LocalPosition: {x: 1.233, y: -0.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4764,7 +4780,7 @@ Transform:
   m_GameObject: {fileID: 718278086}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 33.520004, y: 17.26, z: -0.04116829}
+  m_LocalPosition: {x: 33.520004, y: 18.6, z: -0.04116829}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5657,7 +5673,7 @@ Transform:
   m_GameObject: {fileID: 845894129}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.5, y: 27.900002, z: -0.04116829}
+  m_LocalPosition: {x: -10.5, y: 28.77, z: -0.04116829}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6153,7 +6169,7 @@ Transform:
   m_GameObject: {fileID: 982103395}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 33.520004, y: 27.900002, z: -0.04116829}
+  m_LocalPosition: {x: 33.520004, y: 29.01, z: -0.04116829}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6711,7 +6727,7 @@ Transform:
   m_GameObject: {fileID: 1060063545}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.380005, y: 17.26, z: -0.04116829}
+  m_LocalPosition: {x: 4.380005, y: 18.8, z: -0.04116829}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6824,7 +6840,7 @@ Transform:
   m_GameObject: {fileID: 1163695792}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.479996, y: -2.5199986, z: -0.04116829}
+  m_LocalPosition: {x: -9.479996, y: -2.01, z: -0.04116829}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6904,7 +6920,7 @@ Transform:
   m_GameObject: {fileID: 1164841619}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 33.520004, y: -3.0199986, z: -0.04116829}
+  m_LocalPosition: {x: 33.520004, y: -1.88, z: -0.04116829}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7834,7 +7850,7 @@ Transform:
   m_GameObject: {fileID: 1290910825}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.279999, y: -2.7199993, z: -0.04116829}
+  m_LocalPosition: {x: 13.279999, y: -2.04, z: -0.04116829}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7973,10 +7989,12 @@ GameObject:
   - component: {fileID: 1342053437}
   - component: {fileID: 1342053436}
   - component: {fileID: 1342053438}
+  - component: {fileID: 1342053439}
   - component: {fileID: 1342053440}
+  - component: {fileID: 1342053441}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8474,7 +8492,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342053429}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -8567,7 +8585,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342053429}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d76ecf43f17ad084fb8ba6fd7afa6f57, type: 3}
   m_Name: 
@@ -8623,6 +8641,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1342053439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342053429}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e03d1808b37fb45af2a9cf446a8b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LifeTotal: 5
+  EnemySpeed: 20
+  rb: {fileID: 1342053431}
 --- !u!114 &1342053440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8635,10 +8668,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb16df6f1cb463458494d55c3a81d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  chaseDistance: 8
+  LifeTotal: 5
+  speed: 5
+  chaseDistance: 10
   stopDistance: 1
   target: {fileID: 285884169}
+  rb: {fileID: 1342053431}
+--- !u!114 &1342053441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342053429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca470cd175deb824eac77e1879e602bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 285884175}
+  moveSpeed: 5
 --- !u!1001 &1360093252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8932,7 +8981,7 @@ Transform:
   m_GameObject: {fileID: 1460659969}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.339996, y: 17.26, z: -0.04116829}
+  m_LocalPosition: {x: 18.339996, y: 18.48, z: -0.04116829}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9019,7 +9068,7 @@ GameObject:
   - component: {fileID: 1502785562}
   m_Layer: 0
   m_Name: Baby Robot 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9884,7 +9933,7 @@ Transform:
   m_GameObject: {fileID: 1567398616}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.339996, y: 28.1, z: -0.04116829}
+  m_LocalPosition: {x: 18.339996, y: 29.05, z: -0.04116829}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10345,11 +10394,11 @@ GameObject:
   - component: {fileID: 1650695206}
   m_Layer: 0
   m_Name: Baby Robot 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1650695205
 Transform:
   m_ObjectHideFlags: 0
@@ -10493,13 +10542,14 @@ GameObject:
   - component: {fileID: 1678652994}
   - component: {fileID: 1678652995}
   - component: {fileID: 1678652997}
+  - component: {fileID: 1678652998}
   m_Layer: 0
   m_Name: Robot 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!70 &1678652986
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -10685,13 +10735,28 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678652985}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d76ecf43f17ad084fb8ba6fd7afa6f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 285884169}
   speed: 5
+--- !u!114 &1678652998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678652985}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e03d1808b37fb45af2a9cf446a8b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LifeTotal: 3
+  EnemySpeed: 20
+  rb: {fileID: 1678652987}
 --- !u!1 &1700289731
 GameObject:
   m_ObjectHideFlags: 0
@@ -11932,7 +11997,7 @@ Transform:
   m_GameObject: {fileID: 1942842092}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.380005, y: 28.1, z: -0.04116829}
+  m_LocalPosition: {x: 4.380005, y: 28.97, z: -0.04116829}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
