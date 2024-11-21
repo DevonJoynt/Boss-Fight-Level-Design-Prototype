@@ -6,7 +6,7 @@ public class FireBallProjectile : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform FirePoint;
-    public float bulletSpeed = 10f;
+    public float bulletSpeed = 50f;
 
     void Update()
     {

@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class RobotBoss : MonoBehaviour
 {
-    public int LifeTotal = 3;  //just added
+    public int LifeTotal;  //just added
     public float speed;
     public float chaseDistance;
     public float stopDistance;
