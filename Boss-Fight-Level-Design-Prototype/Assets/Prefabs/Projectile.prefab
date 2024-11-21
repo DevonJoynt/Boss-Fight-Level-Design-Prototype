@@ -12,10 +12,8 @@ GameObject:
   - component: {fileID: 2761318392619449480}
   - component: {fileID: 8750211618723081081}
   - component: {fileID: 9005703751403142451}
-  - component: {fileID: 7521363162912371819}
   - component: {fileID: -758548737029223135}
-  - component: {fileID: -664367672294295941}
-  - component: {fileID: 2086589287957309670}
+  - component: {fileID: -2881379831380515676}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -139,7 +137,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -150,23 +148,8 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &7521363162912371819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1062319428661398186}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 252e87916be4c5942ac071e0e7825b7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1062319428661398186}
-  FirePoint: {fileID: 0}
-  bulletSpeed: 10
 --- !u!114 &-758548737029223135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,20 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
---- !u!114 &-664367672294295941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1062319428661398186}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54d89852a36234147b64bd6a2d62aa5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 20
---- !u!114 &2086589287957309670
+--- !u!114 &-2881379831380515676
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,7 +172,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1062319428661398186}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de7ebe9bebc3faa46b52cc8fcd8d1d8c, type: 3}
+  m_Script: {fileID: 11500000, guid: 54d89852a36234147b64bd6a2d62aa5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20

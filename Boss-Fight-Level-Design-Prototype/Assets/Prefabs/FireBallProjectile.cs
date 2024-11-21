@@ -5,12 +5,11 @@ using UnityEngine;
 public class FireBallProjectile : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    public Transform FirePoint;
+    [SerializeField] public Transform FirePoint;
     public float bulletSpeed = 50f;
 
     void Update()
-    {
-        if (Input.GetButtonDown("Fire1")) // Assuming left mouse button or similar
+    {  if (Input.GetKey(KeyCode.LeftShift))
         {
             Fire();
         }

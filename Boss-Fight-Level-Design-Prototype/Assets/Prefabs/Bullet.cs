@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public float speed = 20f;
+    public float speed = 50f;
 
     // Start is called before the first frame update
     void Start()
