@@ -33,7 +33,7 @@ public class GameManagerScript : MonoBehaviour
     {
         gameOverUI.SetActive(true);
     }
-    public void start()
+    public void restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
